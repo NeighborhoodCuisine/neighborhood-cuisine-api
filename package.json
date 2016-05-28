@@ -1,0 +1,20 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "my-app-description",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --compilers js:babel-register --require babel-polyfill test/",
+    "e2e": "mocha --recursive --compilers js:babel-register --require babel-polyfill e2e/"
+  },
+  "author": "mischkew",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
