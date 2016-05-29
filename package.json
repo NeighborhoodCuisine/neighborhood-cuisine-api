@@ -1,11 +1,13 @@
 {
-  "name": "my-app",
+  "name": "neighborhood-cuisine-api",
   "version": "1.0.0",
-  "description": "my-app-description",
-  "main": "index.js",
+  "description": "Isomorphic neighborhood cuisine api wrapper.",
+  "main": "lib/nc-api.js",
   "scripts": {
-    "test": "mocha --recursive --compilers js:babel-register --require babel-polyfill test/",
-    "e2e": "mocha --recursive --compilers js:babel-register --require babel-polyfill e2e/"
+    "test": "mocha --recursive --require ./bootstrap test/",
+    "test-debug": "mocha debug --recursive --require ./bootstrap test/",
+    "e2e": "mocha --recursive --require ./bootstrap e2e/",
+    "e2e-debug": "mocha debug --recursive --require ./bootstrap e2e/"
   },
   "author": "mischkew",
   "license": "MIT",
@@ -14,7 +16,13 @@
     "babel-polyfill": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
+    "bluebird": "^3.4.0",
     "chai": "^3.5.0",
+    "fetch-mock": "^4.5.0",
+    "isomorphic-fetch": "^2.2.1",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "fetch-api": "github:neighborhoodcuisine/fetch-api"
   }
 }
