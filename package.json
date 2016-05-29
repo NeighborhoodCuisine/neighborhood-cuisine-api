@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha --recursive --require ./bootstrap test/",
     "test-debug": "mocha debug --recursive --require ./bootstrap test/",
-    "e2e": "mocha --recursive --require ./bootstrap e2e/",
-    "e2e-debug": "mocha debug --recursive --require ./bootstrap e2e/"
+    "e2e": "mocha --recursive --require ./bootstrap e2e/ --timeout 20000",
+    "e2e-debug": "mocha debug --recursive --require ./bootstrap e2e/ --timeout 20000"
   },
   "author": "mischkew",
   "license": "MIT",
